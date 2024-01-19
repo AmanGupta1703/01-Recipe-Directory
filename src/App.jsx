@@ -1,5 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// components
+import { Navbar } from "./components";
+
+// pages
 import { Home, Create, Recipe, Search } from "./pages";
 
 // styles
@@ -9,6 +13,7 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
+				<Navbar />
 				<Routes>
 					<Route index path="/" element={<Home />} />
 					<Route path="/create" element={<Create />} />
