@@ -30,7 +30,7 @@ function Recipe() {
 				<p>Takes {recipe.cookingTime} to cook.</p>
 				<ul>
 					{recipe.ingredients.map((ing) => (
-						<li key={ing}>ing</li>
+						<li key={ing}>{ing}</li>
 					))}
 				</ul>
 				<p className="method">{recipe.method}</p>
