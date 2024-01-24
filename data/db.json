@@ -1,66 +1,36 @@
 {
-  "recipes": [
-    {
-      "id": "1",
-      "title": "Veggie Stew",
-      "ingredients": [
-        "1 Carrot",
-        "1 Leek",
-        "200g Tofu",
-        "300ml Veg stock"
-      ],
-      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
-      "cookingTime": "45 minutes"
-    },
-    {
-      "id": "2",
-      "title": "Veggie Pizza",
-      "ingredients": [
-        "1 Base",
-        "Tomata pasata",
-        "1 Green pepper",
-        "100g Mushrooms"
-      ],
-      "method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
-      "cookingTime": "35 minutes"
-    },
-    {
-      "id": "3",
-      "title": "Greek Salad",
-      "ingredients": [
-        "1 Onion",
-        "1 Block of Feta",
-        "Olives",
-        "Tomatoes",
-        "Olive Oil"
-      ],
-      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
-      "cookingTime": "35 minutes"
-    },
-    {
-      "id": "741b",
-      "title": "Fluffy Pancakes",
-      "method": "Make the homemade buttermilk (a.k.a. sour milk). \nMix the dry ingredients in one bowl and the wet ingredients in another. \nWhisk the dry mixture into the wet mixture until smooth. \nScoop the batter onto the skillet. \nCook until the top is bubbly, flip, and continue cooking until both sides are brown.",
-      "cookingTime": "25 minutes",
-      "ingredients": [
-        "¾ cup milk",
-        "2 tablespoons white vinegar",
-        "1 cup all-purpose flour",
-        "2 tablespoons white sugar"
-      ]
-    },
-    {
-      "id": "a5d9",
-      "title": "Miso Noodle Soup in a Jar",
-      "method": " Cut tofu into 1/2-inch planks. Heat oil in a large skillet over medium-high heat. Cook tofu, turning halfway through, until golden, 6 to 8 minutes. Cut tofu into cubes.\n\nStir together green onions, miso paste, garlic, stock base, and ginger in a small bowl. Divide evenly among 3 microwave-safe pint-size canning jars with lids.\n\nLayer evenly with rice vermicelli noodles, tofu, mushrooms, and bok choy. Chill, covered, up to 5 days. To serve, see “Heat and Eat”. Garnish with sliced green onions. ",
-      "cookingTime": "35 minutes",
-      "ingredients": [
-        "¾ cup milk",
-        "2 tablespoons white vinegar",
-        "12 ounces extra-firm tofu",
-        "1 tablespoon vegetable oil",
-        "1/4 cup sliced green onions"
-      ]
-    }
-  ]
+	"recipes": [
+		{
+			"id": "1",
+			"title": "Veggie Stew",
+			"ingredients": ["1 Carrot", "1 Leek", "200g Tofu", "300ml Veg stock"],
+			"method": "1. Pre-heat the oven to 200C/3C/gas 5. Place the carrot, leek and tofu in a large bowl. Add the stock and mix well. 2. Add the rest of the ingredients and mix well. 3. Place the mixture in a large bowl and cover with a lid. 4. Place the lid on the oven and cook for 40 minutes. 5. Serve with a slaw of your choice",
+			"cookingTime": "45 minutes"
+		},
+		{
+			"id": "2",
+			"title": "Veggie Pizza",
+			"ingredients": [
+				"1 Base",
+				"Tomata pasata",
+				"1 Green pepper",
+				"100g Mushrooms"
+			],
+			"method": "1. Pre-heat the oven to 200C/3C/gas 5. Add the pasata, green pepper and mushrooms to the base. Place the lid on the oven and cook for 30 minutes. 5. Serve with a slaw of your choice",
+			"cookingTime": "35 minutes"
+		},
+		{
+			"id": "3",
+			"title": "Greek Salad",
+			"ingredients": [
+				"1 Onion",
+				"1 Block of Feta",
+				"Olives",
+				"Tomatoes",
+				"Olive Oil"
+			],
+			"method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+			"cookingTime": "35 minutes"
+		}
+	]
 }

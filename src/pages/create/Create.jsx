@@ -1,10 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // custom hook
 import { useFetch } from "../../hooks/useFetch";
 
 // styles
 import "./Create.css";
+import { redirect, useNavigate } from "react-router-dom";
 
 function Create() {
 	const [title, setTitle] = useState("");
@@ -17,6 +18,8 @@ function Create() {
 
 	// selecting the DOM input element
 	const ingredientsInput = useRef(null);
+
+	const navigate = useNavigate();
 
 	const { data, error, postData } = useFetch(
 		"http://localhost:3000/recipes",
@@ -39,7 +42,7 @@ function Create() {
 
 		if (!newIngredient) {
 			return;
-		} 
+		}
 
 		if (ingredients.includes(newIngredient)) {
 			setNewIngredient("");
@@ -50,6 +53,15 @@ function Create() {
 		setNewIngredient("");
 		ingredientsInput.current.focus();
 	}
+
+	useEffect(
+		function () {
+			if (data) {
+				navigate("/");
+			}
+		},
+		[data]
+	);
 
 	return (
 		<div className="create">
