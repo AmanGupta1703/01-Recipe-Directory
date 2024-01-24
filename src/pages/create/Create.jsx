@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
 
+// custom hook
+import { useFetch } from "../../hooks/useFetch";
+
 // styles
 import "./Create.css";
 
@@ -15,10 +18,20 @@ function Create() {
 	// selecting the DOM input element
 	const ingredientsInput = useRef(null);
 
+	const { data, error, postData } = useFetch(
+		"http://localhost:3000/recipes",
+		"POST"
+	);
+
 	function handleSubmit(e) {
 		e.preventDefault();
 
-		console.log(title, method, cookingTime, ingredients);
+		postData({
+			title,
+			method,
+			cookingTime: `${cookingTime} minutes`,
+			ingredients,
+		});
 	}
 
 	function handleAdd(e) {
@@ -26,7 +39,7 @@ function Create() {
 
 		if (!newIngredient) {
 			return;
-		}
+		} 
 
 		if (ingredients.includes(newIngredient)) {
 			setNewIngredient("");
