@@ -10,8 +10,4 @@ function ThemeProvider({ children }) {
   );
 }
 
-function useTheme() {
-  return useContext(ThemeContext);
-}
-
-export { ThemeContext, ThemeProvider, useTheme };
+export { ThemeContext, ThemeProvider };

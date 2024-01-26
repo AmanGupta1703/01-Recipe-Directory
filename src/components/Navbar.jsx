@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 
+// components
 import SearchBar from './SearchBar';
 
-// context
-import { useTheme } from './../context/ThemeContext';
+// custom hooks
+import { useTheme } from './../hooks/useTheme';
 
 // styles
 import './Navbar.css';
