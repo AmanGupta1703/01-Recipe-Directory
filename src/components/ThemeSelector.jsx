@@ -1,5 +1,5 @@
 // custom hook
-import { useTheme } from '../hooks/useTheme';
+import { useTheme } from '../hooks/';
 
 // icon
 import { ModeIcon } from './../assets';

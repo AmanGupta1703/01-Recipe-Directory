@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// custom hook
+import { useTheme } from '../hooks/';
+
 // styles
 import './RecipeList.css';
 
@@ -18,8 +21,10 @@ function RecipeList({ recipes }) {
 }
 
 function Recipe({ recipe }) {
+  const { mode } = useTheme();
+
   return (
-    <div className='card'>
+    <div className={`card ${mode}`}>
       <h3>{recipe.title}</h3>
       <p>{recipe.cookingTime} to make.</p>
       <div>{recipe.method.substring(0, 100)}...</div>

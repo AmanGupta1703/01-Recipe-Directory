@@ -6,12 +6,17 @@ import { Navbar, ThemeSelector } from './components';
 // pages
 import { Home, Create, Recipe, Search } from './pages';
 
+// cutsom hooks
+import { useTheme } from './hooks/';
+
 // styles
 import './App.css';
 
 function App() {
+  const { mode } = useTheme();
+
   return (
-    <div className='App'>
+    <div className={`App ${mode}`}>
       <BrowserRouter>
         <Navbar />
         <ThemeSelector />
