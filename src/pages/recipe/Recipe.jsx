@@ -43,6 +43,13 @@ function Recipe() {
     [id]
   );
 
+  function handleClick() {
+    projectFirestore
+      .collection('recipes')
+      .doc(id)
+      .update({ title: 'Updated title.' });
+  }
+
   if (error) {
     return <p className='error'>{error}</p>;
   }
@@ -62,6 +69,7 @@ function Recipe() {
           ))}
         </ul>
         <p className='method'>{recipe.method}</p>
+        <button onClick={handleClick}>Update me</button>
       </div>
     );
   }
