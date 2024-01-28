@@ -1,21 +1,47 @@
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 // custom hook
-import { useFetch, useTheme } from '../../hooks/';
+import { useTheme } from '../../hooks/';
 
 // styles
 import './Recipe.css';
+
+// db
+import { projectFirestore } from '../../firebase/config';
 
 function Recipe() {
   const { id } = useParams();
 
   const { mode } = useTheme();
 
-  const {
-    data: recipe,
-    error,
-    isPending,
-  } = useFetch(`http://localhost:3000/recipes/${id}`);
+  const [recipe, setRecipe] = useState(null);
+  const [isPending, setIsPending] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(
+    function () {
+      setIsPending(true);
+
+      projectFirestore
+        .collection('recipes')
+        .doc(id)
+        .get()
+        .then(function (doc) {
+          if (doc.exists) {
+            setIsPending(false);
+            setRecipe({ ...doc.data() });
+          } else {
+            setIsPending(false);
+            setError('Could not find that recipe.');
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+    [id]
+  );
 
   if (error) {
     return <p className='error'>{error}</p>;
