@@ -20,21 +20,26 @@ function Home() {
   useEffect(function () {
     setIsPending(true);
 
-    projectFirestore
-      .collection('recipes')
-      .get()
-      .then(function (snapshot) {
+    // similar to a event listener
+    // `onSnapshot` (will  run whenever there is
+    // any changes to the database)
+    // eg: add, delete, update
+    const unsub = projectFirestore.collection('recipes').onSnapshot(
+      function (snapshot) {
         const results = [];
         snapshot.docs.forEach(function (doc) {
           results.push({ id: doc.id, ...doc.data() });
         });
         setData(results);
         setIsPending(false);
-      })
-      .catch(function (error) {
-        setError(error.message);
+      },
+      function (error) {
         setIsPending(false);
-      });
+        setError(error.message);
+      }
+    );
+
+    return () => unsub();
   }, []);
 
   projectFirestore;
